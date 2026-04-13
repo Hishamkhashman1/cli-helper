@@ -3,10 +3,10 @@
 
 # read the passed output
 
-# call the parser
+# call the parser  (to clean and extract useful info from the raw output)
 
 # call the matcher
 
 # call the formatter
 
-# print final result 
+# print final result
