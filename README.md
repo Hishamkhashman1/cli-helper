@@ -64,9 +64,9 @@ Append summary to terminal
 ### Core
 
 - Python 3.10+
-- `re`
-- `dataclasses`
-- `subprocess` (if needed)
+- `re` - Regular expression module for pattern matching
+- `dataclasses` - data structure definitions for organizing code data
+- `subprocess` - Process management (if needed)
 
 ### Shell
 
