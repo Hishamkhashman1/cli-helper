@@ -1,4 +1,4 @@
-# errhint  **TBD**
+# BugSquancher
 
 ## Product Definition
 
@@ -295,7 +295,7 @@ Use pip package.
 
 ```toml
 [project]
-name = "errhint" (**TBD**)
+name = "bugsquancher"
 version = "0.1.0"
 description = "Append human-readable explanations to terminal errors"
 requires-python = ">=3.10"
