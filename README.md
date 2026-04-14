@@ -26,4 +26,4 @@ Recommended:
 MVP in progress.
 
 ## Notes
-Details available on request.
+Details available on request..
