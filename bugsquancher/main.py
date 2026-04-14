@@ -1,4 +1,7 @@
 import sys
+from parser import parse_output
+from matcher import match_pattern
+from formatter import format_hint
 
 #Entry point (orchestrator)
 
@@ -17,9 +20,11 @@ exit_code = sys.argv[2]
 output = sys.stdin.read()
 
 # call the parser  (to clean and extract useful info from the raw output)
-
+parsed = parse_output (output)
 # call the matcher
-
+pattern = match_pattern (parsed)
 # call the formatter
-
+hint = format_hint(command, exit_code, pattern)
 # print final result
+if hint:
+    print(hint)
