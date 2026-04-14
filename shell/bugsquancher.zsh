@@ -24,8 +24,9 @@ trap 'exec > >(tee -a "$OUTPUT_FILE") 2>&1' DEBUG
     if ((EXIT_CODE >0)); then
       # read the captured outpur from the file
       OUTPUT=$(<"$OUTPUT_FILE")
-      # call python with variables (command, exit code and output)
-      python3 "$APP_PATH" "$LAST_COMMAND" "$EXIT_CODE" "$OUTPUT"
+      # call python with variables (command, exit code) and pass output via stdin
+      # this avoids word-splitting and preserves newlines
+      printf '%s' "$OUTPUT" | python3 "$APP_PATH" "$LAST_COMMAND" "$EXIT_CODE"
       fi
   }
 
