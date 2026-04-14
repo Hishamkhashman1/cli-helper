@@ -1,5 +1,5 @@
 # BugSquancher
-
+![logo](image.png)
 ## Overview
 BugSquancher appends short, human-readable hints to terminal errors without changing how users run commands.
 
@@ -26,4 +26,4 @@ Recommended:
 MVP in progress.
 
 ## Notes
-Details available on request..
+Details available on request.
