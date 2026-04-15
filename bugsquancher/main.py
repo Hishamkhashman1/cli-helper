@@ -22,9 +22,9 @@ output = sys.stdin.read()
 # call the parser  (to clean and extract useful info from the raw output)
 parsed = parse_output (output)
 # call the matcher
-pattern = match_pattern (parsed)
+matched_pattern = match_pattern (parsed)
 # call the formatter
-hint = format_hint(command, exit_code, pattern)
+hint = format_hint(command, exit_code, matched_pattern)
 # print final result
 if hint:
     print(hint)
