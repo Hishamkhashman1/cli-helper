@@ -1,30 +1,23 @@
-# BugSquancher
-![logo](image.png)
-## Overview
-BugSquancher appends short, human-readable hints to terminal errors without changing how users run commands.
+# 🛸 BugSquancher
 
-## Why It Exists
-Terminal errors are loud and often unhelpful. BugSquancher adds a brief, structured hint block so you can decide what to try next without digging through long logs.
+Terminal errors suck.
+You get 50 lines of noise… and still have to Google the fix.
 
-## What It Does
-- Keeps the original output intact
-- Appends a concise hint block at the end
-- Avoids certainty and never auto-runs commands
+**BugSquancher adds a short, human-readable explanation directly in your terminal.**
 
-## Output (Example)
+---
+
+## Example
+
+### Before
+
 ```
-before Bugsquancher
-
 ModuleNotFoundError: No module named 'does_not_exist'
+```
 
-after Bugsquancher
+### After
 
-
-
-
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-ModuleNotFoundError: No module named 'does_not_exist'
+```
 🛸 Bugsquancher detected a squanch
 ━━━━━━━━━━━━━━━━━━━━━━━
 Command: python3 -c "import does_not_exist"
@@ -43,20 +36,107 @@ pip install <package_name>
 
 Context
 Run in your active virtual environment or fix the import statement.
-
-
 ```
 
-## Install
-```bash
-pip install bugsquancher
+---
+![logo](image.png)
+##  What it does
+
+* Keeps your original terminal output intact
+* Appends a **clean, structured hint block**
+* Gives:
+
+  * Cause
+  * Fix
+  * Try (command)
+  * Context
+* No guessing, no AI hallucination, no auto-execution
+
+---
+
+## 🧱 How it works
+
+* Hooks into your shell (`zsh`)
+* Detects failed commands (exit code > 0)
+* Captures:
+
+  * command
+  * output
+  * exit code
+* Passes everything to a Python analyzer
+* Matches known patterns
+* Prints a **human-readable summary at the end**
+
+---
+
+## 📦 Install
+
+```
+pipx install git+https://github.com/Hishamkhashman1/bug-squancher
 bugsquancher init zsh
 source ~/.zshrc
+
 ```
 
-## Styles
-- Default output is a clean diagnostic block.
-- Set `BUGSQUANCHER_STYLE=2` for the squanchier Rick-and-Morty style.
+---
 
-## Notes
-The shell hook is zsh-first right now.
+## 🎨 Styles
+
+Default = clean diagnostic output
+
+Optional:
+
+```
+export BUGSQUANCHER_STYLE=2
+```
+
+👉 enables a more “squanchy” / themed output
+
+---
+
+## ⚠️ Notes
+
+* Currently **zsh-first**
+* Pattern-based (no AI dependency)
+* Designed to be:
+
+  * fast
+  * predictable
+  * useful under pressure
+
+---
+
+## 🧠 Philosophy
+
+This is not meant to replace debugging.
+
+It’s meant to answer:
+
+> “What should I try next?”
+
+without leaving your terminal.
+
+---
+
+## 🛠 Roadmap
+
+* More error patterns (Python, Node, DBs)
+* Smarter matching (confidence scoring)
+* Optional AI fallback
+* Bash / Fish support
+
+---
+
+## 💬 Contributing
+
+Found an error pattern worth adding?
+
+Open an issue or PR — patterns are simple and easy to extend.
+
+---
+
+## 🔥 Status
+
+Actively being built and tested.
+
+Early feedback is very welcome.
