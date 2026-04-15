@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: bugsquancher
+Version: 0.1.0
+Summary: Append human-readable explanations to terminal errors
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# BugSquancher
+![logo](image.png)
+## Overview
+BugSquancher appends short, human-readable hints to terminal errors without changing how users run commands.
+
+## Why It Exists
+Terminal errors are loud and often unhelpful. BugSquancher adds a brief, structured hint block so you can decide what to try next without digging through long logs.
+
+## What It Does
+- Keeps the original output intact
+- Appends a concise hint block at the end
+- Avoids certainty and never auto-runs commands
+
+## Output (Example)
+```
+Cause: <short explanation>
+
+Possible fix: <short guidance>
+
+Recommended:
+<command>
+(<context>)
+```
+
+## Status
+MVP in progress.
+
+## Install
+```bash
+pip install bugsquancher
+bugsquancher init zsh
+source ~/.zshrc
+```
+
+## Styles
+- Default output is a clean diagnostic block.
+- Set `BUGSQUANCHER_STYLE=2` for the squanchier Rick-and-Morty style.
+
+## Notes
+The shell hook is zsh-first right now.

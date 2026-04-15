@@ -1,5 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "bugsquancher"
 version = "0.1.0"
 description = "Append human-readable explanations to terminal errors"
+readme = "README.md"
 requires-python = ">=3.10"
+
+[project.scripts]
+bugsquancher = "bugsquancher.main:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["bugsquancher*"]
+
+[tool.setuptools.package-data]
+bugsquancher = ["shell/*.zsh"]
