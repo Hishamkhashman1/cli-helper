@@ -54,7 +54,7 @@ Run in your active virtual environment or fix the import statement.
 
 ---
 
-## 🧱 How it works
+##  How it works
 
 * Hooks into your shell (`zsh`)
 * Detects failed commands (exit code > 0)
@@ -69,7 +69,7 @@ Run in your active virtual environment or fix the import statement.
 
 ---
 
-## 📦 Install
+##  Install
 
 ```
 pipx install git+https://github.com/Hishamkhashman1/bug-squancher
@@ -80,7 +80,7 @@ source ~/.zshrc
 
 ---
 
-## 🎨 Styles
+##  Styles
 
 Default = clean diagnostic output
 
@@ -94,7 +94,7 @@ export BUGSQUANCHER_STYLE=2
 
 ---
 
-## ⚠️ Notes
+##  Notes
 
 * Currently **zsh-first**
 * Pattern-based (no AI dependency)
@@ -106,7 +106,7 @@ export BUGSQUANCHER_STYLE=2
 
 ---
 
-## 🧠 Philosophy
+##  Philosophy
 
 This is not meant to replace debugging.
 
@@ -118,7 +118,7 @@ without leaving your terminal.
 
 ---
 
-## 🛠 Roadmap
+##  Roadmap
 
 * More error patterns (Python, Node, DBs)
 * Smarter matching (confidence scoring)
@@ -127,7 +127,7 @@ without leaving your terminal.
 
 ---
 
-## 💬 Contributing
+##  Contributing
 
 Found an error pattern worth adding?
 
@@ -135,7 +135,7 @@ Open an issue or PR — patterns are simple and easy to extend.
 
 ---
 
-## 🔥 Status
+##  Status
 
 Actively being built and tested.
 
