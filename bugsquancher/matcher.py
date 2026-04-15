@@ -14,6 +14,6 @@ def match_pattern(cleaned_output):
     for pattern in PYTHON_PATTERN_SEEDS:
         #if error matches name return recommendation
         if pattern["name"] in cleaned_output:
-            return pattern["recommended_command"]
+            return pattern
     return None
-print (f"🤓 How to squanch it (probably) --> {match_pattern(test_output)}")
+# print (f"🤓 How to squanch it (probably) --> {match_pattern(test_output)}")
